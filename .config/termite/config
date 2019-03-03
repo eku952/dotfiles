@@ -1,0 +1,30 @@
+[options]
+dynamic_title = true
+font = Overpass Mono 10
+scrollback_lines = 10000
+hyperlinks = true
+cursor_blink = system
+cursor_shape = ibeam
+scrollbar = right
+
+[colors]
+background = rgba(51, 34, 105, 0.9)
+foreground = #dde2ec
+cursor = #dde2ec
+
+color0=#332269
+color1=#2B85BA
+color2=#4982BE
+color3=#5C8DC4
+color4=#6F8FC9
+color5=#99ABD6
+color6=#B6C9E3
+color7=#dde2ec
+color8=#9a9ea5
+color9=#2B85BA
+color10=#4982BE
+color11=#5C8DC4
+color12=#6F8FC9
+color13=#99ABD6
+color14=#B6C9E3
+color15=#dde2ec

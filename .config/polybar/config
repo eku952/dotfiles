@@ -1,0 +1,150 @@
+[bar/dp0]
+
+font-0 = "Overpass Mono:pixelsize=10;2.25"
+
+monitor = "DVI-D-0"
+
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+fixed-center = true
+
+width = 100%
+height = 30
+
+background = #1d1f21
+foreground = #707880
+
+radius = 0.0
+
+# line-size = 1
+# line-color = #f00
+
+# border-size = 2
+# border-color = #00ff00
+padding-left = 1
+padding-right = 1
+module-margin = 1
+
+modules-left = i3 
+modules-center = date
+modules-right = cpu memory pulseaudio
+
+[bar/dp1]
+
+font-0 = "Overpass Mono:pixelsize=10;2.25"
+
+monitor = "HDMI-0"
+
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+fixed-center = true
+
+width = 100%
+height = 30
+
+background = #1d1f21
+foreground = #707880
+
+radius = 0.0
+
+# line-size = 1
+# line-color = #f00
+
+# border-size = 2
+# border-color = #00ff00
+padding-left = 1
+padding-right = 1
+module-margin = 1
+
+modules-left = i3
+modules-center = date
+modules-right = network temperature pulseaudio
+
+[module/i3]
+strip-wsnumbers = true
+pin-workspaces = true
+
+type = internal/i3
+format = <label-state> <label-mode>
+
+ws-icon-0 = 1: 
+ws-icon-1 = 2: 
+ws-icon-2 = 3: 
+ws-icon-3 = 4: 
+ws-icon-4 = 5: 
+ws-icon-5 = 6
+ws-icon-6 = 7
+ws-icon-7 = 8
+
+label-focused = %index%
+label-focused-foreground = #cc6666
+label-focused-background = #1d1f21
+label-focused-underline = #fba922
+label-focused-padding = 1
+
+label-unfocused = %index%
+label-unfocused-padding = 1
+
+label-visible = %index%
+label-visible-underline = #555555
+label-visible-padding = 1
+
+label-urgent = %index%
+label-urgent-foreground = #000000
+label-urgent-background = #bd2c40
+label-urgent-padding = 1
+
+
+[module/date]
+type = internal/date
+interval = 1.0
+date = %A, %d %B %I:%M %p
+
+# [module/github]
+# type = internal/github
+
+# ; Accessing an access token stored in file
+# token = ${file:/path/to/file/containing/github/access.token}
+
+# ; Accessing an access token stored in an environment variable
+# token = ${env:GITHUB_ACCESS_TOKEN}
+
+# ; Whether empty notifications should be displayed or not
+# empty-notifications = false
+
+[module/title]
+type = internal/xwindow
+# format-background = #f00
+format-foreground = #f0c674
+format-padding = 1
+label-maxlen = 50
+
+[module/pulseaudio]
+type = internal/pulseaudio
+interval = 2
+
+[module/cpu]
+type = internal/cpu
+interval = 0.5
+label = CPU %percentage%%
+
+[module/memory]
+type = internal/memory
+interval = 3
+format = <label>
+label = RAM %gb_used%/%gb_free%
+
+[module/temperature]
+type = internal/temperature
+label = TEMP %temperature-c%
+label-warn = TEMP %temperature-c%
+label-warn-foreground = #f00
+
+[module/network]
+type = internal/network
+interface = enp0s31f6
+label-connected = %local_ip%%downspeed:9%
+label-disconnected = not connected
+label-disconnected-foreground = #66ffffff
