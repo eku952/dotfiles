@@ -6,7 +6,7 @@ if [$# -eq 0 ]
 fi
 
 echo Setting wal theme
-wal -i $1 -o "~/.config/scripts/setTermiteConfig.sh"
+wal -i $1 -o "$HOME/.config/scripts/setTermiteConfig.sh"
 
 echo Restoring wallpaper
 feh --bg-fill $1
